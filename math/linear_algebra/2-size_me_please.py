@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
+""" Write a function def matrix_shape(matrix): that calculates the shape of a matrix """
+
 
 def matrix_shape(matrix):
+    """ returns the shape a multi dimensional matrix"""
     matrix_shape= []
     while type(matrix)is list:
         matrix_shape.append(len(matrix))
