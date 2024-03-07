@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-function def matrix_transpose(matrix): 
+function def matrix_transpose(matrix):
 that returns the transpose of a 2D matrix, matrix
 """
 
