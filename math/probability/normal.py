@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import math
 """
 Normal distribution class evolved with each senquence of code
 """
