@@ -14,4 +14,3 @@ def add_matrices2D(arr1, arr2):
     added_arrays = [[i + j for i, j in zip(row1, row2)]
                     for row1, row2 in zip(arr1, arr2)]
     return added_arrays
-    
