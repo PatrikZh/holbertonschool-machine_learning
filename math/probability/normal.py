@@ -26,7 +26,7 @@ class Normal:
             self.stddev = (sum((ent - self.mean) ** 2 for ent in data)
                            / len(data)) ** 0.5
 
-     def pdf(self, x):
+    def pdf(self, x):
         """
         pdf function
         """
