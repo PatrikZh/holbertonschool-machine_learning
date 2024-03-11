@@ -46,7 +46,20 @@ class Normal:
         exponent = -((x - self.mean) ** 2) / (2 * self.stddev ** 2)
         return coeff * (e ** exponent)
 
+    def pdf(self, x):
+        """Assuming implementation is here"""
+        pass
+    
     def cdf(self, x):
         """A very simple and inaccurate approximation of CDF for educational purposes."""
         z = (x - self.mean) / self.stddev
         return 0.5 * (1 + self.sign(z) * (1 - 1 / (1 + abs(z))))
+
+    def sign(self, x):
+        """Utility function to return the sign of x."""
+        if x > 0:
+            return 1
+        elif x < 0:
+            return -1
+        else:
+            return 0
