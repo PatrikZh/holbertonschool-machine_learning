@@ -3,6 +3,7 @@
 Exponential distribution class evolved with each senquence of code
 """
 
+
 class Exponential:
     """
     the exponential class
