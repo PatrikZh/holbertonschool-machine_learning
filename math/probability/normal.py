@@ -25,6 +25,7 @@ class Normal:
             self.mean = sum(data) / len(data)
             self.stddev = (sum((ent - self.mean) ** 2 for ent in data)
                            / len(data)) ** 0.5
+
     def z_score(self, x):
         """
         z score function
@@ -36,7 +37,7 @@ class Normal:
         x value function
         """
         return float(self.mean + z * self.stddev)
-    
+
     def pdf(self, x):
         """Approximate the probability density function for a given x."""
         pi = 3.141592653589793
