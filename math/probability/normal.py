@@ -6,11 +6,11 @@ Normal distribution class evolved with each senquence of code
 
 class Normal:
     """
-    the normal class
+    the normal class initiating
     """
     def __init__(self, data=None, mean=0, stddev=1.):
         """
-        init of the class as blue print
+       init of the class as blue print
         """
         self.mean = float(mean)
         self.stddev = float(stddev)
