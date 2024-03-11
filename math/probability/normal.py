@@ -38,9 +38,9 @@ class Normal:
         return float(self.mean + z * self.stddev)
     
     def pdf(self, x):
-        """
-        Calculate the probability density function for a given x.
-        """
-        coeff = 1 / (self.stddev * math.sqrt(2 * math.pi))
-        exponent = math.exp(-(x - self.mean) ** 2 / (2 * self.stddev ** 2))
-        return coeff * exponent
+        """Approximate the probability density function for a given x."""
+        pi = 3.141592653589793
+        e = 2.718281828459045
+        coeff = 1 / (self.stddev * (2 * pi) ** 0.5)
+        exponent = -((x - self.mean) ** 2) / (2 * self.stddev ** 2)
+        return coeff * (e ** exponent)
