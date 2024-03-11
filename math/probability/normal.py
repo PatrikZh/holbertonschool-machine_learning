@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import math
 """
 Normal distribution class evolved with each senquence of code
 """
@@ -25,16 +26,6 @@ class Normal:
             self.mean = sum(data) / len(data)
             self.stddev = (sum((ent - self.mean) ** 2 for ent in data)
                            / len(data)) ** 0.5
-
-    def pdf(self, x):
-        """
-        pdf function
-        """
-        p = 3.1415926536
-        e = 2.7182818285
-        return ((1 / (self.stddev * ((2 * p) ** 0.5))) *
-                (e ** (-0.5 * ((x - self.mean) / self.stddev) ** 2))
-
     def z_score(self, x):
         """
         z score function
@@ -46,3 +37,11 @@ class Normal:
         x value function
         """
         return float(self.mean + z * self.stddev)
+    
+    def pdf(self, x):
+        """
+        Calculate the probability density function for a given x.
+        """
+        coeff = 1 / (self.stddev * math.sqrt(2 * math.pi))
+        exponent = math.exp(-(x - self.mean) ** 2 / (2 * self.stddev ** 2))
+        return coeff * exponent
