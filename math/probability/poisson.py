@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Poisson distribution evolved with each senquence of code
+Poisson distribution class evolved with each senquence of code
 """
 
 
