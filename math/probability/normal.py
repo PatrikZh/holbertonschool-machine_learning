@@ -1,4 +1,4 @@
-#!/usr/bin/ python3
+#!/usr/bin/env python3
 """
 Normal distribution class evolved with each senquence of code
 """
