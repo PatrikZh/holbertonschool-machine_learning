@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+Normal file
+"""
+
 
 class Normal:
     def __init__(self, data=None, mean=0, stddev=1.):
@@ -24,5 +28,3 @@ class Normal:
         erf *= (2 / (pi ** (1 / 2)))
         cdf = (1 / 2) * (1 + erf)
         return cdf
-
-
