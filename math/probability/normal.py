@@ -12,9 +12,8 @@ class Normal:
         if data is not None:
             if not isinstance(data, list) or len(data) < 2:
                 raise ValueError("data must be a list with multiple values")
-            self.mean = sum(data) / len(data)
-            self.stddev = (sum((x - self.mean) ** 2 for x in data)
-               / len(data)) ** 0.5
+        mean_adjusted_squares_sum = sum((x - self.mean) ** 2 for x in data)
+        self.stddev = (mean_adjusted_squares_sum / len(data)) ** 0.5
         else:
             self.mean = mean
             self.stddev = stddev
