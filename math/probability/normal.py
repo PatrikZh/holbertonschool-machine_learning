@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-"""
-Normal distribution class evolved with each senquence of code
-"""
-
+import math
 
 class Normal:
     """
@@ -10,7 +6,7 @@ class Normal:
     """
     def __init__(self, data=None, mean=0, stddev=1.):
         """
-       init of the class as blue print
+        init of the class as blue print
         """
         self.mean = float(mean)
         self.stddev = float(stddev)
@@ -39,23 +35,17 @@ class Normal:
         return float(self.mean + z * self.stddev)
 
     def pdf(self, x):
-        """Approximate the probability density function for a given x."""
-        pi = 3.141592653589793
-        e = 2.718281828459045
+        """
+        Approximate the probability density function for a given x.
+        """
+        pi = math.pi
+        e = math.e
         coeff = 1 / (self.stddev * (2 * pi) ** 0.5)
         exponent = -((x - self.mean) ** 2) / (2 * self.stddev ** 2)
         return coeff * (e ** exponent)
     
     def cdf(self, x):
-        """A very simple and inaccurate approximation of CDF for educational purposes."""
-        z = (x - self.mean) / self.stddev
-        return 0.5 * (1 + self.sign(z) * (1 - 1 / (1 + abs(z))))
-
-    def sign(self, x):
-        """Utility function to return the sign of x."""
-        if x > 0:
-            return 1
-        elif x < 0:
-            return -1
-        else:
-            return 0
+        """
+        Calculate the cumulative distribution function for a given x using the error function.
+        """
+        return 0.5 * (1 + math.erf((x - self.mean) / (self.stddev * math.sqrt(2))))
