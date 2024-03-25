@@ -4,7 +4,7 @@ A class Neuron that defines a single neuron performing binary classification
 """
 
 
-import numpy as py
+import numpy as np
 
 
 class Neuron:
