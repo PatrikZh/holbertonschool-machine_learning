@@ -32,7 +32,7 @@ class Neuron:
     @property
     def A(self):
         return self.__A
-    
+
     def forward_prop(self, X):
         """Calculates the forward propagation of the neuron"""
         z = np.matmul(self.W, X) + self.b
