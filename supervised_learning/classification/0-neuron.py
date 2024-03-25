@@ -13,7 +13,7 @@ class Neuron:
     """
     def __init__(self, nx):
         """class constructor"""
-        if type(nx) is not int:
+        if type(nx) != int:
             raise TypeError("nx must be integer")
         if nx < 1:
             raise ValueError("ns must be a positive integer")
