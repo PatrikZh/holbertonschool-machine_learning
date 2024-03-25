@@ -11,4 +11,14 @@ class Neuron:
     """
     A single neuron performing binary classification
     """
-    pass
+    def __init__(self, nx):
+        """class constructor"""
+        if type(nx) is not int:
+            raise TypeError("nx must be integer")
+        if nx < 1:
+            raise ValueError("ns must be a positive integer")
+        self.W = np.random.rand(1, nx)
+        self.b = 0
+        self.A = 0
+
+    
