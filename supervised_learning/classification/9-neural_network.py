@@ -50,8 +50,8 @@ class NeuralNetwork:
             """ get method for property W2"""
             return self.__W2
 
-        @property
-        def b2(self):
+    @property
+    def b2(self):
             """ get method for property b2"""
             return self.__b2
 
