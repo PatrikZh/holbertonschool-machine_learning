@@ -30,37 +30,37 @@ class NeuralNetwork:
         self.__b2 = 0
         self.__A2 = 0
 
-        @property
-        def W1(self):
+    @property
+    def W1(self):
             """ get method for property W1"""
             return self.__W1
 
-        @property
-        def b1(self):
+    @property
+    def b1(self):
             """ get method for property b1"""
             return self.__b1
 
-        @property
-        def A1(self):
+    @property
+    def A1(self):
             """ get method for property A1"""
             return self.__A1
 
-        @property
-        def W2(self):
+    @property
+    def W2(self):
             """ get method for property W2"""
             return self.__W2
 
-        @property
-        def b2(self):
+    @property
+    def b2(self):
             """ get method for property b2"""
             return self.__b2
 
-        @property
-        def A2(self):
+    @property
+    def A2(self):
             """ get method for property A2"""
             return self.__A2
 
-        def forward_prop(self, X):
+    def forward_prop(self, X):
             """ Calculates the forward propagation of the neural network"""
             z1 = np.matmul(self.W1, X) + self.b1
             self.__A1 = 1 / (1 + (np.exp(-z1)))
