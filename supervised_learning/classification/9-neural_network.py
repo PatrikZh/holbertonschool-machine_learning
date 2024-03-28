@@ -26,9 +26,9 @@ class NeuralNetwork:
         self.b1 = np.zeros((nodes, 1))
         self.A1 = 0
 
-        self.W2 = np.random.randn(1, nodes)
-        self.b2 = 0
-        self.A2 = 0
+        self.__W2 = np.random.randn(1, nodes)
+        self.__b2 = 0
+        self.__A2 = 0
 
         @property
         def W1(self):
