@@ -34,23 +34,28 @@ class NeuralNetwork:
         def W1(self):
             """ get method for property W1"""
             return self.__W1
+
         @property
         def b1(self):
             """ get method for property b1"""
             return self.__b1
+
         @property
         def A1(self):
             """ get method for property A1"""
             return self.__A1
+
         @property
         def W2(self):
             """ get method for property W2"""
-            return self.W2
+            return self.__W2
+
         @property
         def b2(self):
             """ get method for property b2"""
-            return self.b2
+            return self.__b2
+
         @property
         def A2(self):
             """ get method for property A2"""
-            return self.A2
+            return self.__A2
