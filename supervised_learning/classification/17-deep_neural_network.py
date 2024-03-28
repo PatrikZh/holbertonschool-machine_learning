@@ -59,4 +59,4 @@ class DeepNeuralNetwork:
         """
         gets the private instance attribute __weights
         """
-        return self.__weight
+        return self.__weights
