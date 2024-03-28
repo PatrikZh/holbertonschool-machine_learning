@@ -91,5 +91,5 @@ class NeuralNetwork:
         d_W = (1 / m) * (np.matmul(X, dz.transpose())).transpose()
         d_b = (1 / m) * (np.sum(dz))
 
-        self.__W = self.W - (alpha * d_W)
-        self.__b = self.b - (alpha * d_b)
+        self.__W = self.W - (alpha * d__W)
+        self.__b = self.b - (alpha * d__b)
