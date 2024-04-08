@@ -4,7 +4,7 @@ Write a function def build_model(nx, layers, activations, lambtha, keep_prob)
 that builds a neural network with the Keras library
 """
 
-import tenserflow.keras as k
+import tenserflow.keras as K
 
 def build_model(nx, layers, activations, lambtha, keep_prob):
     """ 
