@@ -6,7 +6,6 @@ categorical crossentropy loss and accuracy metrics
 """
 
 import tensorflow.keras as K
-import numpy as np
 
 
 def optimize_model(network, alpha, beta1, beta2):
